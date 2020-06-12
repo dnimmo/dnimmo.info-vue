@@ -2,22 +2,32 @@
   <section class="wrapper">
     <header class="sidebarHeader">
       <button 
+        @click="toggleChannels"
         class="sidebarToggle">
         <img src="images/menu-close.svg" />
+        <h2 class="sidebarTitle">Channels</h2>
       </button>
-      <h2 class="sidebarTitle">Channels</h2>
     </header>
-    <div class="channelList">
+    <div 
+      v-if="$store.state.expanded"
+      class="channelList">
       <!-- TODO: Add all the channels here as links, but from the state rather -->
-      <p class="channelLinkText"># general</p>
-      <p class="channelLinkText"># etc</p>
+        <p class="channelLinkText"># general</p>
+        <p class="channelLinkText"># etc</p>
     </div>
   </section>
 </template>
 
 <script>
+import store from '~/state/channel_list'
+
 export default {
-  
+  store,
+  methods: {
+    toggleChannels() {
+      this.$store.commit('toggleExpanded')
+    }
+  }
 }
 </script>
 
