@@ -11,13 +11,22 @@
         <h2 class="sidebarTitle">Channels</h2>
       </button>
     </header>
-    <div 
-      v-if="$store.state.expanded"
-      class="channelList">
-      <!-- TODO: Add all the channels here as links, but from the state rather -->
-        <p class="channelLinkText"># general</p>
-        <p class="channelLinkText"># etc</p>
-    </div>
+    <transition name="expand">
+      <div 
+        v-if="$store.state.expanded"
+        class="channelList"
+        >
+        <!-- TODO: Add all the channels here as links, but from the state rather -->
+          <p class="channelLinkText"># general</p>
+          <p class="channelLinkText"># etc</p>
+          <p class="channelLinkText"># general</p>
+          <p class="channelLinkText"># etc</p>
+          <p class="channelLinkText"># general</p>
+          <p class="channelLinkText"># etc</p>
+          <p class="channelLinkText"># general</p>
+          <p class="channelLinkText"># etc</p>
+      </div>
+    </transition>
   </section>
 </template>
 
@@ -67,6 +76,41 @@ export default {
           transform: none;
         };
       };
+  }
+
+  .channelList {
+    overflow: hidden;
+    max-height: 100%;
+  }
+
+  .expand-enter, .expand-leave-to {
+    opacity: 0;
+  }
+
+  .expand-enter-to, .expand-leave {
+    opacity: 1;
+  }
+
+  .expand-enter-active {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  .expand-leave-active {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   }
 
   .sidebarTitle {
