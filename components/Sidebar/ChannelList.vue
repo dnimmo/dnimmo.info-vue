@@ -9,8 +9,8 @@
     </header>
     <div class="channelList">
       <!-- TODO: Add all the channels here as links, but from the state rather -->
-      <p class="channelLinkText">#general</p>
-      <p class="channelLinkText">#etc</p>
+      <p class="channelLinkText"># general</p>
+      <p class="channelLinkText"># etc</p>
     </div>
   </section>
 </template>
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .wrapper {
     border-top: 1px solid rgb(82,38,83);
   }
@@ -42,29 +42,27 @@ export default {
     font-weight: normal;
     color: #cfc3cf;
     transition: transform 0.1s linear;
-  }
-
-    .sidebarToggle:first-of-type {
-      text-align: left;
-    };
+      
+      &:first-of-type{
+        text-align: left;
+      };
   
-    .sidebarToggle:hover {
-      transform: scale(1.2);
-    };
+      &:hover{
+        transform: scale(1.2);
 
-    .sidebarToggle:first-of-type:hover {
-      transform: none;
-    }
+        &:first-of-type{
+          transform: none;
+        };
+      };
+  }
 
   .sidebarTitle {
     display: inline;
     font-size: 18px;
     font-weight: normal;
     padding-left: 4px;
-  }
-
-  .channelList {
-    border-top: 1px solid rgb(82,38,83);
+    opacity: 0.8;
+    color: white;
   }
 
   .channelLinkText {
@@ -76,9 +74,14 @@ export default {
     opacity: 0.8;
     padding: 2px 42px;
     margin: 2px 0;
-    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+
+      &:hover {
+        opacity: 1;
+        background-color: #350d36;
+     }
   }
 
 </style>
+

@@ -1,8 +1,8 @@
 <template>
-  <aside class="wrapper">
+  <div class="wrapper">
     <sidebar-header/>
     <channel-list/>
-  </aside>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .wrapper {
     background-color: #3F0E40;
   }

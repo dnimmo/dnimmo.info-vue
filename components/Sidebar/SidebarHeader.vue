@@ -1,18 +1,19 @@
 <template>
-  <section class="wrapper">
-    <h1>DavidNimmoCV</h1>
+  <div class="wrapper">
+    <h1 class="mainHeading">DavidNimmoCV</h1>
     <div class="usernameWrapper">
       <span class="statusIndicator"></span>
       <span class="username">Nimmo</span>
     </div>
-  </section>
+  </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   .wrapper {
     border-top: 1px solid rgb(82,38,83);
     padding: 0 20px;
     background-color: #3F0E40;
+    color: white;
   }
 
   .mainHeading {
