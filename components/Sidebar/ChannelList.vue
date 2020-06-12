@@ -4,7 +4,10 @@
       <button 
         @click="toggleChannels"
         class="sidebarToggle">
-        <img src="images/menu-close.svg" />
+        <!-- Channel toggle image -->
+        <img v-if="$store.state.expanded" src="images/menu-close.svg" />
+        <img v-else src="images/menu-open.svg" />
+        <!-- /Channel toggle image -->
         <h2 class="sidebarTitle">Channels</h2>
       </button>
     </header>
