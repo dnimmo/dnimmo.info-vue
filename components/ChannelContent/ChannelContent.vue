@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <section class="channelContentWrapper">
     <header class="channelHeader">
       <h1 class="channelTitle">Channel title</h1>
       <span class="channelSubtitle">(#channel-subtitle)</span>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .wrapper {
+  .channelContentWrapper {
     background-color: #fff;
     color: #000; 
 
