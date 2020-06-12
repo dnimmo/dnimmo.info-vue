@@ -78,6 +78,10 @@
     border-radius: 37px;
   }
 
+  .username {
+    font-weight: bold;
+  }
+
   .postContent {
     display: grid;
     grid-template-rows: 20% 1fr;
