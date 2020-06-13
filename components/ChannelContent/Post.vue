@@ -26,7 +26,10 @@
           v-if="post.threadContent" 
           class="threadLinkWrapper">
             <img class="threadLinkAvatar" src="images/nimmo.png" />
-            <button class="threadLinkText">
+            <button 
+              class="threadLinkText"
+              @click="openThread"
+            >
               {{
               post.threadContent.length === 1 
                 ? "1 reply" 
@@ -47,7 +50,10 @@ export default {
         type: String,
         required: false
       },
-      mainPostContent: String,
+      mainPostContent: {
+        type: String,
+        required: true
+      },
       link: {
         type: String,
         required: false
@@ -60,6 +66,21 @@ export default {
         type: Array,
         required: false
       }
+    }
+    , openThreadFunction: {
+      type: Function,
+      required: false,
+    }
+  },
+  methods: {
+    openThread() {
+      this.openThreadFunction({
+        header: {
+          title: "Thread",
+          description: this.post.mainPostContent
+        },
+        posts: this.post.threadContent
+      })
     }
   }
 }

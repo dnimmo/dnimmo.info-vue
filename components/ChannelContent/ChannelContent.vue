@@ -5,9 +5,13 @@
       v-for="post in posts" 
       :key="post.mainPostContent"
       :post="post"
+      :openThreadFunction="openThread"
     />
     <thread
-      v-if=false 
+      v-if="$store.state.name === states.DISPLAYING_THREAD_CONTENT" 
+      :header="$store.state.threadContent.header"
+      :posts="$store.state.threadContent.posts"
+      :closeThreadFunction="closeThread"
     />
   </section>
 </template>
@@ -17,8 +21,10 @@ import ChannelHeader from './ChannelHeader'
 import Post from './Post'
 import Thread from './ThreadContent'
 import getChannel from '~/data/channels'
+import store, { states } from '~/state/channel_content'
 
 export default {
+  store,
   props: {
     channelSlug: {
       type: String,
@@ -29,12 +35,21 @@ export default {
     const channel = getChannel(this.channelSlug)
 
     return {  
+      states,
       channelDetails: {
         title: channel.name,
         slug: channel.slug,
         description: channel.description
       },
       posts: channel.content 
+    }
+  },
+  methods: {
+    openThread({ header, posts }) {
+      this.$store.commit('openThread', { header, posts })
+    },
+    closeThread() {
+      this.$store.commit('closeThread')
     }
   },
   components: {

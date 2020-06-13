@@ -2,7 +2,10 @@
   <div>
     <header class="channelHeader">
       <h1 class="channelTitle">{{header.title}}</h1>
-      <span class="channelSubtitle">(#{{header.slug}})</span>
+      <span 
+        v-if="header.slug"
+        class="channelSubtitle">(#{{header.slug}})
+      </span>
       <p class="channelDescription">{{header.description}}</p>
       <slot />
     </header>
@@ -20,7 +23,7 @@ export default {
       },
       slug: {
         type: String,
-        required: true
+        required: false
       },
       description: {
         type: String,

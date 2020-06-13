@@ -13,15 +13,21 @@ const store =
   new Vuex.Store({
     state() {
       return {
-        name : states.DISPLAYING_MAIN_CONTENT
+        name : states.DISPLAYING_MAIN_CONTENT,
+        threadContent: { 
+          header: {},
+          posts: []
+        }
       }
     },
     mutations: {
-      openThread(state) {
+      openThread(state, threadContent) {
         state.name = states.DISPLAYING_THREAD_CONTENT
+        state.threadContent = threadContent
       },
       closeThread(state) {
         state.name = states.DISPLAYING_MAIN_CONTENT
+        state.threadContent = {}
       }
     }
   })

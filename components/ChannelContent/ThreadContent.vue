@@ -1,9 +1,19 @@
 <template>
   <section class="threadWrapper">
-    <channel-header>
-      <button class="button">Close thread</button>
+    <channel-header
+      :header="header"
+    >
+      <button 
+        class="button"
+        @click="closeThreadFunction">
+          Close thread
+      </button>
     </channel-header>
-    <post />
+    <post 
+      v-for="post in posts"
+      :key="post.mainPostContent"
+      :post="post"
+    />
   </section>
 </template>
 
@@ -12,6 +22,30 @@ import ChannelHeader from './ChannelHeader'
 import Post from './Post'
 
 export default {
+  props: {
+    header: {
+      title: {
+        type: String,
+        required: true
+      },
+      slug: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String,
+        required: true
+      }
+    },
+    posts: {
+      type: Array,
+      required: true,
+    },
+    closeThreadFunction: {
+      type: Function,
+      required: true
+    }
+  },
   components: {
     ChannelHeader,
     Post

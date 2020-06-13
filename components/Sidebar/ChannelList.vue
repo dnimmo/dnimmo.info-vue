@@ -19,7 +19,7 @@
         <nuxt-link 
           v-for="channel in channelList" 
           class="channelLinkText"
-          :key="channel"
+          :key="channel.id"
           :to="channel.slug"
         >
           # {{channel.id}}
