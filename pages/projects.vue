@@ -2,7 +2,7 @@
   <!-- TODO: Reduce the repetition amongst the page files-->
   <div class="root">
     <sidebar/>
-    <channel-content channelSlug="general"/>
+    <channel-content channelSlug="projects"/>
   </div>
 </template>
 

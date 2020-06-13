@@ -18,9 +18,6 @@ import Post from './Post'
 import Thread from './ThreadContent'
 import getChannel from '~/data/channels'
 
-const channel =
-  getChannel('general')
-
 export default {
   props: {
     channelSlug: {
@@ -29,6 +26,8 @@ export default {
     },
   },
   data () {
+    const channel = getChannel(this.channelSlug)
+
     return {  
       channelDetails: {
         title: channel.name,

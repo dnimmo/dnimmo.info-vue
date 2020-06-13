@@ -16,14 +16,14 @@
         v-if="$store.state.expanded"
         class="channelList"
         >
-        <a 
+        <nuxt-link 
           v-for="channel in channelList" 
           class="channelLinkText"
           :key="channel"
-          :href="channel.slug"
+          :to="channel.slug"
         >
           # {{channel.id}}
-        </a>
+        </nuxt-link>
       </nav>
     </transition>
   </section>
