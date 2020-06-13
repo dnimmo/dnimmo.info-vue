@@ -1,14 +1,35 @@
 <template>
   <div>
     <header class="channelHeader">
-      <h1 class="channelTitle">Channel title</h1>
-      <span class="channelSubtitle">(#channel-subtitle)</span>
-      <p class="channelDescription">Channel description</p>
+      <h1 class="channelTitle">{{header.title}}</h1>
+      <span class="channelSubtitle">{{header.slug}}</span>
+      <p class="channelDescription">{{header.description}}</p>
       <slot />
     </header>
     <div class="channelTopSpacing"></div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    header: {
+      title: {
+        type: String,
+        required: true
+      },
+      slug: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String,
+        required: true
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
   .channelHeader {
