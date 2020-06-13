@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="root">
-      <sidebar/>
-      <channel-content :channelSlug="channelSlug"/>
-    </div>
+  <div class="root">
+    <sidebar/>
+    <channel-content :channelSlug="channelSlug"/>
   </div>
 </template>
 
