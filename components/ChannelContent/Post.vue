@@ -116,7 +116,7 @@ export default {
 
   .postContent {
     display: grid;
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: 7% 1fr;
   }
 
   .threadLinkWrapper {
