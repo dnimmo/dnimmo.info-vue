@@ -30,11 +30,11 @@
 
   .statusIndicator {
     background-color: #2BAC76;
-    width: 10px;
+    width: 7px;
     border: 1px solid #2BAC76;
     color: #2BAC76; 
     border-radius: 100%;
-    height: 10px;
+    height: 7px;
     margin-top: 3px;
   }
 

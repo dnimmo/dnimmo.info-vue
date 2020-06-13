@@ -1,5 +1,6 @@
 <template>
   <section class="wrapper">
+    <!-- only add this if there's a date -->
     <div class="dateWrapper">
         <span></span>
         <div class="date">
