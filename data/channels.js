@@ -2,6 +2,7 @@ import blogs from "./blogs";
 import general from "./general";
 import employmentHistory from "./employment_history";
 import projects from "./projects";
+import recommendations from "./recommendations";
 
 
 export 
@@ -32,7 +33,13 @@ const channels = [
         description: "A collection of projects that you can look at the source code for.",
         id: "projects",
         content: projects
-    } 
+    }, {
+      name: "Recommendations",
+      slug: "recommendations",
+      description: "Recommendations I've received from colleagues.",
+      id: "recommendations",
+      content: recommendations
+    }
 ];
 
 

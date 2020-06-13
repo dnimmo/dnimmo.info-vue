@@ -10,12 +10,14 @@
         <span></span>
     </div>
     <div class="postWrapper">
-      <img class="avatar" src="images/nimmo.png" />
+      <img class="avatar" :src="post.avatar" />
       <div class="postContent">
         <span class="username">
-          Nimmo
+          {{ post.username }}
         </span>
-        <p>{{post.mainPostContent}}</p>
+        <div>
+          <p v-for="paragraph in post.mainPostContent" :key="paragraph">{{paragraph}}</p>
+        </div>
         <a 
           v-if="post.link" 
           :href="post.link"
@@ -77,7 +79,7 @@ export default {
       this.openThreadFunction({
         header: {
           title: "Thread",
-          description: this.post.mainPostContent
+          description: this.post.mainPostContent[0]
         },
         posts: this.post.threadContent
       })

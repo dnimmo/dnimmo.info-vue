@@ -7,7 +7,7 @@
       >
       <post 
         v-for="post in posts" 
-        :key="post.mainPostContent"
+        :key="post.mainPostContent[0]"
         :post="post"
         :openThreadFunction="openThread"
       />
