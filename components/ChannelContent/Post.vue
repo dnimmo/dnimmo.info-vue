@@ -10,10 +10,10 @@
         <span></span>
     </div>
     <div class="postWrapper">
-      <img class="avatar" :src="post.avatar" />
+      <img class="avatar" :src="post.avatar || 'images/nimmo.png'" />
       <div class="postContent">
         <span class="username">
-          {{ post.username }}
+          {{ post.username || "Nimmo" }}
         </span>
         <div>
           <p v-for="paragraph in post.mainPostContent" :key="paragraph">{{paragraph}}</p>
