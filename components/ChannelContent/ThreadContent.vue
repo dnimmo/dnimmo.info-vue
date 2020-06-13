@@ -9,6 +9,7 @@
           Close thread
       </button>
     </channel-header>
+    <div class="spacer" />
     <post 
       v-for="post in posts"
       :key="post.mainPostContent"
@@ -76,5 +77,9 @@ export default {
     padding: 5px 10px;
     margin: 5px 0;
     cursor: pointer;
+  }
+
+  .spacer {
+    height: 35px;
   }
 </style>

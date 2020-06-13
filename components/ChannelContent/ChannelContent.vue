@@ -1,12 +1,17 @@
 <template>
   <section class="channelContentWrapper">
     <channel-header :header="channelDetails" />
-    <post 
-      v-for="post in posts" 
-      :key="post.mainPostContent"
-      :post="post"
-      :openThreadFunction="openThread"
-    />
+    <div 
+      class="postContainer"
+      :class="$store.state.name === states.DISPLAYING_THREAD_CONTENT ? 'unfocus' : 'focus' " 
+      >
+      <post 
+        v-for="post in posts" 
+        :key="post.mainPostContent"
+        :post="post"
+        :openThreadFunction="openThread"
+      />
+    </div>
     <thread
       v-if="$store.state.name === states.DISPLAYING_THREAD_CONTENT" 
       :header="$store.state.threadContent.header"
@@ -69,6 +74,23 @@ export default {
       box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1);
       height: 100vh;
       overflow: overlay;
+    }
+  }
+
+  .postCointainer {
+    transition: 2s opacity ease-in-out;
+  }
+
+  .focus {
+    opacity: 1;
+  }
+  
+  .unfocus {
+    display: none;
+
+    @media screen and (min-width:450px) {
+      display: block;
+      opacity: 0.3;
     }
   }
 </style>

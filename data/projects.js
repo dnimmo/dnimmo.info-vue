@@ -37,14 +37,14 @@ const projects =
         linkText: "Project Arklay: Server-side code."
     },
     { 
-        mainPostContent: "My CV, in React: The site you're looking at right now, but built in React",
+        mainPostContent: "My CV, in React: The site you're looking at right now, but built in React.",
         
         date: "May 26th, 2020",
         link: "https://github.com/dnimmo/loose-client",
         linkText: "David Nimmo's CV site (React)"
     },
     { 
-        mainPostContent: "My CV, in Vue: The site you're looking at right now",
+        mainPostContent: "My CV, in Vue: The site you're looking at right now.",
         
         date: "May 26th, 2020",
         link: "https://github.com/dnimmo/dnimmo.info-vue",

@@ -23,6 +23,7 @@ export default {
   min-height: 95vh;
   color: white;
   font-family: 'Hind', sans-serif;
+  margin: -8px;
   
   @media(min-width: 450px) {
     display: grid;
