@@ -12,7 +12,7 @@
       </button>
     </header>
     <transition name="expand">
-      <div 
+      <nav 
         v-if="$store.state.expanded"
         class="channelList"
         >
@@ -24,7 +24,7 @@
         >
           # {{channel.id}}
         </a>
-      </div>
+      </nav>
     </transition>
   </section>
 </template>
