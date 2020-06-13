@@ -16,15 +16,14 @@
         v-if="$store.state.expanded"
         class="channelList"
         >
-        <!-- TODO: Add all the channels here as links, but from the state rather -->
-          <p class="channelLinkText"># general</p>
-          <p class="channelLinkText"># etc</p>
-          <p class="channelLinkText"># general</p>
-          <p class="channelLinkText"># etc</p>
-          <p class="channelLinkText"># general</p>
-          <p class="channelLinkText"># etc</p>
-          <p class="channelLinkText"># general</p>
-          <p class="channelLinkText"># etc</p>
+        <a 
+          v-for="channel in channelList" 
+          class="channelLinkText"
+          :key="channel"
+          :href="channel.slug"
+        >
+          # {{channel.id}}
+        </a>
       </div>
     </transition>
   </section>
@@ -32,9 +31,20 @@
 
 <script>
 import store from '~/state/channel_list'
+import { channels } from '~/data/channels'
+
+const channelList = 
+  channels.map(
+    ({ id, slug}) => ({ id, slug })
+  )
 
 export default {
   store,
+  data() {
+    return {
+      channelList,
+    }
+  },
   methods: {
     toggleChannels() {
       this.$store.commit('toggleExpanded')
