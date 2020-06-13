@@ -2,7 +2,7 @@
   <div>
     <div class="root">
       <sidebar/>
-      <channel-content/>
+      <channel-content :channelSlug="channelSlug"/>
     </div>
   </div>
 </template>
@@ -10,8 +10,14 @@
 <script>
 import Sidebar from '~/components/Sidebar/Sidebar.vue'
 import ChannelContent from '~/components/ChannelContent/ChannelContent.vue'
+import { channels } from '~/data/channels'
 
 export default {  
+  data() {
+    return { 
+      channelSlug: channels[0].slug 
+    }
+  },
   components: {
     Sidebar,
     ChannelContent

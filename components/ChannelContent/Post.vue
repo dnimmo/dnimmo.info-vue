@@ -1,10 +1,11 @@
 <template>
   <section class="wrapper">
-    <!-- only add this if there's a date -->
-    <div class="dateWrapper">
+    <div 
+      v-if="post.date"
+      class="dateWrapper">
         <span></span>
         <div class="date">
-          Date
+          {{post.date}}
         </div>
         <span></span>
     </div>
@@ -14,25 +15,55 @@
         <span class="username">
           Nimmo
         </span>
-        <p>Main post content goes here.</p>
-        <!-- this bit only appears if there's a link; obviously needs to be updated to make use of v-if -->
+        <p>{{post.mainPostContent}}</p>
         <a 
-          v-if=true 
-          href="/"
+          v-if="post.link" 
+          :href="post.link"
           target="_blank">
-            Linky goes here
+            {{post.linkText || post.link}}
         </a>
-        <!-- this bit only appears if there's a thread link -->
         <div 
-          v-if=true 
+          v-if="post.threadContent" 
           class="threadLinkWrapper">
             <img class="threadLinkAvatar" src="images/nimmo.png" />
-            <button class="threadLinkText">1 reply</button>
+            <button class="threadLinkText">
+              {{
+              post.threadContent.length === 1 
+                ? "1 reply" 
+                : `${post.threadContent.length} replies`
+              }}
+            </button>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  props: {
+    post: {
+      date: {
+        type: String,
+        required: false
+      },
+      mainPostContent: String,
+      link: {
+        type: String,
+        required: false
+      },
+      linkText: {
+        type: String,
+        required: false
+      },
+      threadContent: {
+        type: Array,
+        required: false
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
   .wrapper {

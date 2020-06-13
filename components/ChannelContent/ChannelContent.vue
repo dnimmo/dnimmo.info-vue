@@ -1,8 +1,14 @@
 <template>
   <section class="channelContentWrapper">
-    <channel-header />
-    <post />
-    <thread />
+    <channel-header :header="channelDetails" />
+    <post 
+      v-for="post in posts" 
+      :key="post.mainPostContent"
+      :post="post"
+    />
+    <thread
+      v-if=false 
+    />
   </section>
 </template>
 
@@ -10,13 +16,33 @@
 import ChannelHeader from './ChannelHeader'
 import Post from './Post'
 import Thread from './ThreadContent'
+import getChannel from '~/data/channels'
+
+const channel =
+  getChannel('general')
 
 export default {
+  props: {
+    channelSlug: {
+      type: String,
+      required: true,
+    },
+  },
+  data () {
+    return {  
+      channelDetails: {
+        title: channel.name,
+        slug: channel.slug,
+        description: channel.description
+      },
+      posts: channel.content 
+    }
+  },
   components: {
     ChannelHeader,
     Post,
     Thread
-  }
+  },
 }
 </script>
 
@@ -31,5 +57,4 @@ export default {
       overflow: overlay;
     }
   }
-
 </style>

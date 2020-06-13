@@ -2,7 +2,7 @@
   <div>
     <header class="channelHeader">
       <h1 class="channelTitle">{{header.title}}</h1>
-      <span class="channelSubtitle">{{header.slug}}</span>
+      <span class="channelSubtitle">(#{{header.slug}})</span>
       <p class="channelDescription">{{header.description}}</p>
       <slot />
     </header>
