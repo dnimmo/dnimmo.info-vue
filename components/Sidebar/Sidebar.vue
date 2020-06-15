@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <sidebar-header/>
-    <channel-list/>
+    <channel-list :activePage='activePage' />
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
   components: {
     SidebarHeader,
     ChannelList
+  },
+  props: {
+    activePage : {
+      type: String,
+      required: true,
+    }
   }
 }
 </script>

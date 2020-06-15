@@ -8,7 +8,7 @@ const recommendations =
         linkText: "See Andrew's profile",
         date: "Oct 28th, 2016",
         username: "Andrew Charnley - Technical Architect (Consultant)",
-        avatar: "images/andrew_charnley.jpeg"
+        avatar: "/images/andrew_charnley.jpeg"
     },
     { 
       mainPostContent: ["I had the pleasure of working with David on an industry leading monitoring and reporting platform for the transportation sector. He quickly grasped a highly complex domain and began adding value from day one providing technical leadership on key issues of our Angular SPA such as architecture, scalability and security."
@@ -21,7 +21,7 @@ const recommendations =
       linkText: "See Andy's profile",
       date: "Jan 9th, 2017",
       username: "Andy Hardy - Research Software Engineer @ Newcastle University",
-      avatar: "images/empty-avatar-png.png"
+      avatar: "/images/empty-avatar-png.png"
     },
     { 
       mainPostContent: ["When I joined the DWP's Software Engineering department I had very little experience and very few transferable skills. At the time our team was only four strong, with only David and myself assigned to actual programming work, and we had a brand new project to begin.",
@@ -33,7 +33,7 @@ const recommendations =
       linkText: "See Nick's profile",
       date: "Mar 6th, 2017",
       username: "Nick Holvast - Software Engineer @ DWP",
-      avatar: "images/nick_holvast.jpeg"
+      avatar: "/images/nick_holvast.jpeg"
     },
     { 
       mainPostContent: ["David and I worked together at the Department for Work and Pensions for around 8 months. David was in a senior position on the team when I first started at DWP and from day one he was excellent in this capacity. Coming into an existing team can be a daunting experience (especially for someone with a background in a different programming language) but from the outset he made me feel welcome and empowered. On day one he asked me to perform a code review on the existing codebase and although I was unfamiliar with the technoligies involved, he took my comments on board without ego and ensured that we acted upon them collaboratively as a team.",
@@ -55,7 +55,7 @@ const recommendations =
       linkText: "See Ian's profile",
       date: "Apr 28th, 2017",
       username: "Ian Forster - Software Engineer Team Lead @ Sage UK",
-      avatar: "images/ian_forster.jpeg"
+      avatar: "/images/ian_forster.jpeg"
     },{ 
       mainPostContent: ["David is an extremely good programmer with a passion for doing things the right way. He was very obviously committed to his craft, and it showed in everything he did. He's determined to learn the best way of doing things and never scared of change, just doing things in the way that resulted in the highest quality on as many different metrics as he could measure.",
       "When I worked with him, I l saw first hand that he is very strong with functional programming, Elm, and Node.js, but David is the sort of individual who is tool-agnostic (and practice-agnostic) and I would trust to learn the best tool for any job, as well as the right practice for any job. Of course, he has also accrued a myriad skills I did not list and I'm sure will accrue many more as they fit the task at hand.",
@@ -67,7 +67,7 @@ const recommendations =
       linkText: "See Andrew's profile",
       date: "Jun 12th, 2018",
       username: "Andrew Hynes - Contributing Developer @ Kinaxis",
-      avatar: "images/andrew_hynes.jpeg"
+      avatar: "/images/andrew_hynes.jpeg"
     },{ 
       mainPostContent: ["Working with Nimmo at Click Travel was truly a great experience and certainly something I'll miss. His comprehension of the modern front-end world and the direction it's going in or should be going in is second to none, and I genuinely feel that anyone who has the good fortune of working with him will be a much better developer because of it.",
       "As an engineer, Nimmo is both very technically able and very creative, meaning there aren't really any limits to what he can achieve. He has an enviable ability to convey meaning and insight in an incredibly clear and concise manner (something that is reflected in his code), and when paired with his intelligence and grasp of engineering practices, means you will not only get the highest quality software, but also the best out of the team building it.",
@@ -79,7 +79,7 @@ const recommendations =
       linkText: "See Todd's profile",
       date: "Feb 6th, 2019",
       username: "Todd Runham - Senior Software Engineer @ Gousto",
-      avatar: "images/todd_runham.jpeg"
+      avatar: "/images/todd_runham.jpeg"
     },{ 
       mainPostContent: ["I have worked with Nimmo on various projects. He was one of the first non-Java developers we hired at Click. He has had an impact on how projects were being coded.", "He has been of great help to me personally whenever I had questions as I was new to NodeJS. We worked on a PWA during a hack week away in a barn with other developers. It was great to learn from him. Even after leaving Click, I found myself scratching my head on an issue and called on Nimmo to help me out.", "He was very supportive, helped me diagnose the issue and I ended up learning a thing or two as usual from him. He is a great personality to have around as well. I would highly recommend Nimmo."
     ],
@@ -88,7 +88,7 @@ const recommendations =
       linkText: "See Tajinder's profile",
       date: "Nov 8th, 2019",
       username: "Tajinder Singh - Solutions Architect @ Inspired Thinking Group",
-      avatar: "images/taj_singh.jpeg"
+      avatar: "/images/taj_singh.jpeg"
     },{ 
       mainPostContent: ["Nimmo was instrumental in transforming the front-end architecture at Click Travel, converting a legacy system that most engineers avoided into something to which they were excited to contribute. He actively sought input from the rest of the Product Engineering to ensure the system would be easy for others to pick up going forward, resulting in a much more readable and therefore maintainable solution.",
       "Nimmo is knowledgeable, articulate and a pleasure to work with."
@@ -98,7 +98,7 @@ const recommendations =
       linkText: "See Sarah's profile",
       date: "Apr 7th, 2020",
       username: "Sarah Hale - Director of Engineering @ Unity Technologies",
-      avatar: "images/sarah_hale.jpeg"
+      avatar: "/images/sarah_hale.jpeg"
     },{ 
       mainPostContent: ["Nimmo was the pioneer and driving force of a project to transform frontend development at Click, I was lucky enough to work in this team, led by Nimmo. As a team lead, Nimmo is helpful, patient, cheerful and just a pleasure to work with. He’s always happy to help, he cares about the health of the team, and I always felt led by Nimmo, rather than managed.",
       "Nimmo is a visionary, he has ideas and is very knowledgeable. He has transformed how we do things at Click from functional programming to using Elm for our frontend. Nimmo knows how to get things done and he knows how to share his knowledge effectively across an entire department of developers."
@@ -108,7 +108,7 @@ const recommendations =
       linkText: "See Charlotte's profile",
       date: "Jun 4th, 2020",
       username: "Charlotte Neill - Software Engineer @ Click Travel",
-      avatar: "images/charlotte_neill.jpeg"
+      avatar: "/images/charlotte_neill.jpeg"
     },{ 
       mainPostContent: ["It was very clear when we hired Nimmo that we were blessed with a very special person. Nimmo cares deeply about his craft and his team. His impact significantly raised the quality of engineering and the effectiveness of everyone involved.",
       "Nimmo is a very skilled engineer with a deep understanding of front-end technologies, coupled with the drive to explore emerging techniques in this volatile field. He identified Elm as robust, productive alternative and has instigated an evolutionary transformation of a large browser based client from a legacy JavaScript codebase to a clearer, maintainable Elm application. He has the good sense that success is achieved as a team with a shared vision and understanding. He keenly attends to the engineering on-boarding process and always has time for others with any questions.",
@@ -119,7 +119,7 @@ const recommendations =
       linkText: "See Steffan's profile",
       date: "Jun 8th, 2020",
       username: "Steffan Wescott - Senior Software Engineer @ Click Travel",
-      avatar: "images/steffan_wescott.jpeg"
+      avatar: "/images/steffan_wescott.jpeg"
     },{ 
       mainPostContent: ["Would i like to write a recommendation for David Nimmo? Yes, yes I would!",
       "From working on our platform, developing mobile apps, PWA's and every other element of our system in between, Nimmo has been instrumental in guiding and implementing the technical direction of what we have worked on over the past 3 years.",
@@ -131,7 +131,7 @@ const recommendations =
       linkText: "See Robin's profile",
       date: "Jun 9th, 2020",
       username: "Robin Smith - Chief Product Engineer @ Click Travel",
-      avatar: "images/robin_smith.jpeg"
+      avatar: "/images/robin_smith.jpeg"
     },
   ]
 

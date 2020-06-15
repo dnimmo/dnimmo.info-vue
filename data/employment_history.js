@@ -12,7 +12,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Technical Design Lead at British Airways - One Destination"],
@@ -34,7 +34,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Technical Design Lead at British Airways - ba.com (Information Site)"],
@@ -51,7 +51,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Technical Design Lead at British Airways - Mobile ba.com"],
@@ -71,7 +71,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Technical Design Lead at British Airways - Core Engineering Team"],
@@ -103,7 +103,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Senior Applications Developer at Nomad Digital"],
@@ -123,7 +123,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Lead Software Engineer at Department For Work & Pensions"],
@@ -155,7 +155,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Senior Software Engineer at Click Travel - Pioneer Flights"],
@@ -184,7 +184,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["Tech Lead at Click Travel - Front-End Architecture Team"],
@@ -195,7 +195,7 @@ const employmentHistory =
               }
           ],
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       }
   ];
 

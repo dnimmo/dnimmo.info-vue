@@ -3,8 +3,8 @@
     <header class="channelHeader">
       <h1 class="channelTitle">{{header.title}}</h1>
       <span 
-        v-if="header.slug"
-        class="channelSubtitle">(#{{header.slug}})
+        v-if="header.id"
+        class="channelSubtitle">(# {{header.id}})
       </span>
       <p class="channelDescription">{{header.description}}</p>
       <slot />
@@ -38,10 +38,10 @@ export default {
   .channelHeader {
     padding: 11px 15px 4px;
     border-bottom: 1px solid #d8d8d8;
-    width: 100%;
     background-color: #fff;
 
-      @media screen and (min-width:450px) {    
+      @media screen and (min-width:450px) {  
+        width: 100%;  
         position: fixed;
       }
   }

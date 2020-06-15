@@ -5,8 +5,8 @@
         @click="toggleChannels"
         class="sidebarToggle">
         <!-- Channel toggle image -->
-        <img v-if="$store.state.expanded" src="images/menu-close.svg" />
-        <img v-else src="images/menu-open.svg" />
+        <img v-if="$store.state.expanded" src="/images/menu-close.svg" />
+        <img v-else src="/images/menu-open.svg" />
         <!-- /Channel toggle image -->
         <h2 class="sidebarTitle">Channels</h2>
       </button>
@@ -19,6 +19,7 @@
         <nuxt-link 
           v-for="channel in channelList" 
           class="channelLinkText"
+          :class="channel.id === activePage ? 'active' : 'inactive'"
           :key="channel.id"
           :to="channel.slug"
         >
@@ -40,6 +41,12 @@ const channelList =
 
 export default {
   store,
+  props : {
+    activePage : {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       channelList,
@@ -148,6 +155,11 @@ export default {
         opacity: 1;
         background-color: #350d36;
      }
+
+    &.active {
+      background-color: #1164A3;
+      opacity: 1;
+    }
   }
 
 </style>

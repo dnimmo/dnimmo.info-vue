@@ -43,7 +43,7 @@ export default {
       states,
       channelDetails: {
         title: channel.name,
-        slug: channel.slug,
+        id: channel.id,
         description: channel.description
       },
       posts: channel.content 

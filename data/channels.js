@@ -9,7 +9,7 @@ export
 const channels = [ 
     {
         name: "General",
-        slug: "general",
+        slug: "/general",
         description: "Newcastle-based software engineer.",
         id: "general",
         content : general 
@@ -23,19 +23,19 @@ const channels = [
     },
     {
         name: "Blogs",
-        slug: "blogs",
+        slug: "/blogs",
         description: "Sometimes I write things! You can find examples of those times below.",
         id: "blogs",
         content: blogs
     }, {
         name: "Projects",
-        slug: "projects",
+        slug: "/projects",
         description: "A collection of projects that you can look at the source code for.",
         id: "projects",
         content: projects
     }, {
       name: "Recommendations",
-      slug: "recommendations",
+      slug: "/recommendations",
       description: "Recommendations I've received from colleagues.",
       id: "recommendations",
       content: recommendations

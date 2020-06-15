@@ -1,7 +1,7 @@
 <template>
   <!-- TODO: Reduce the repetition amongst the page files-->
   <div class="root">
-    <sidebar/>
+    <sidebar activePage="blogs" />
     <channel-content channelSlug="blogs"/>
   </div>
 </template>

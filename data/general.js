@@ -6,14 +6,14 @@ const general =
           link: "https://www.linkedin.com/in/david-nimmo-89568666/",
           linkText: "Feel free to connect with me on LinkedIn",
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       },
       {
           mainPostContent: ["If you'd like to see various bits and pieces I've done over the years, feel free to have a look:"],
           link: "https://github.com/dnimmo",
           linkText: "My Github profile",
           username: "Nimmo",
-          avatar: "images/nimmo.png"
+          avatar: "/images/nimmo.png"
       }
   ];
 

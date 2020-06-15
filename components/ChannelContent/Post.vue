@@ -10,7 +10,7 @@
         <span></span>
     </div>
     <div class="postWrapper">
-      <img class="avatar" :src="post.avatar || 'images/nimmo.png'" />
+      <img class="avatar" :src="post.avatar || '/images/nimmo.png'" />
       <div class="postContent">
         <span class="username">
           {{ post.username || "Nimmo" }}
@@ -27,7 +27,7 @@
         <div 
           v-if="post.threadContent" 
           class="threadLinkWrapper">
-            <img class="threadLinkAvatar" src="images/nimmo.png" />
+            <img class="threadLinkAvatar" src="/images/nimmo.png" />
             <button 
               class="threadLinkText"
               @click="openThread"
@@ -139,7 +139,11 @@ export default {
 
   .postContent {
     display: grid;
-    grid-template-rows: 6% 1fr;
+    grid-template-rows: 50px 1fr;
+
+    @media screen and (min-width:450px) {
+      grid-template-rows: 20px 1fr;
+    }
   }
 
   .threadLinkWrapper {
