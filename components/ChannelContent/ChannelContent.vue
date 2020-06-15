@@ -1,17 +1,20 @@
 <template>
   <section class="channelContentWrapper">
     <channel-header :header="channelDetails" />
-    <div 
-      class="postContainer"
-      :class="$store.state.name === states.DISPLAYING_THREAD_CONTENT ? 'unfocus' : 'focus' " 
-      >
-      <post 
-        v-for="post in posts" 
-        :key="post.mainPostContent[0]"
-        :post="post"
-        :openThreadFunction="openThread"
-      />
-    </div>
+      <div 
+        class="postContainer"
+        :class="$store.state.name === states.DISPLAYING_THREAD_CONTENT ? 'unfocus' : 'focus' " 
+        >
+        <div v-if="!posts || posts.length === 0">
+          <p>Hm, there isn't anything to display here.</p>
+        </div>
+        <post 
+          v-for="post in posts" 
+          :key="post.mainPostContent[0]"
+          :post="post"
+          :openThreadFunction="openThread"
+        />
+      </div>
     <thread
       v-if="$store.state.name === states.DISPLAYING_THREAD_CONTENT" 
       :header="$store.state.threadContent.header"

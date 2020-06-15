@@ -89,9 +89,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
   .wrapper {
     display: block;
-    /* this needs to be amended to be able to blur posts when threads are open */
+    animation: slideUp 0.4s;
   }
 
   .dateWrapper {

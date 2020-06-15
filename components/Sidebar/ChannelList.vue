@@ -97,15 +97,11 @@ export default {
 
   .channelList {
     overflow: hidden;
-    max-height: 100%;
+    max-height: 100vh;
   }
 
   .expand-enter, .expand-leave-to {
-    opacity: 0;
-  }
-
-  .expand-enter-to, .expand-leave {
-    opacity: 1;
+    max-height: 0vh;
   }
 
   .expand-enter-active {
@@ -120,14 +116,14 @@ export default {
   }
 
   .expand-leave-active {
-    -moz-transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
   }
 
   .sidebarTitle {
@@ -158,6 +154,7 @@ export default {
 
     &.active {
       background-color: #1164A3;
+      color: #fff;
       opacity: 1;
     }
   }
