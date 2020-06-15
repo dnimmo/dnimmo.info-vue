@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapper">
+  <section class="wrapper" :class="animate ? 'animated' : 'notAnimated'">
     <div 
       v-if="post.date"
       class="dateWrapper">
@@ -47,6 +47,10 @@
 <script>
 export default {
   props: {
+    animate: {
+      type: Boolean,
+      required: false
+    },
     post: {
       date: {
         type: String,
@@ -103,7 +107,10 @@ export default {
 
   .wrapper {
     display: block;
-    animation: slideUp 0.4s;
+    
+    &.animated {
+      animation: slideUp 0.4s;
+    }
   }
 
   .dateWrapper {

@@ -10,6 +10,7 @@
         </div>
         <post 
           v-for="post in posts" 
+          :animate="true"
           :key="post.mainPostContent[0]"
           :post="post"
           :openThreadFunction="openThread"

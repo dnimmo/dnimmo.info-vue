@@ -12,6 +12,7 @@
     <div class="spacer" />
     <post 
       v-for="post in posts"
+      :animate="false"
       :key="post.mainPostContent"
       :post="post"
     />
@@ -55,6 +56,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @keyframes slideIn {
+    from {
+      transform: translate3d(100vw, 0, 0)
+    }
+
+    to {
+      transform: translate3d(0, 0, 0)
+    }
+  }
+
   .threadWrapper {
     position: absolute;
     top: 0;
@@ -67,6 +78,7 @@ export default {
 
     @media screen and (min-width:450px){
       width: 50%;
+      animation: slideIn .3s;
     };
   }
 
