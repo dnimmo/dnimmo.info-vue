@@ -90,9 +90,11 @@ export default {
   }
   
   .unfocus {
+    max-height: 0;
     display: none;
 
     @media screen and (min-width:450px) {
+      max-height: auto;
       display: block;
       opacity: 0.3;
     }

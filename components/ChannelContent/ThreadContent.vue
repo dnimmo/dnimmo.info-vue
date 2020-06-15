@@ -56,6 +56,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @keyframes slideUp {
+    from {
+      transform: translate3d(0, 200vh, 0)
+    }
+
+    to {
+      transform: translate3d(0, 0, 0)
+    }
+  }
+
   @keyframes slideIn {
     from {
       transform: translate3d(100vw, 0, 0)
@@ -75,6 +85,7 @@ export default {
     height: 100%;
     border-left: 1px solid #d8d8d8;
     overflow: scroll;
+    animation: slideUp .3s;
 
     @media screen and (min-width:450px){
       width: 50%;
