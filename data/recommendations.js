@@ -133,6 +133,20 @@ const recommendations =
       username: "Robin Smith - Chief Product Engineer @ Click Travel",
       avatar: "/images/robin_smith.jpeg"
     },
+
+    { 
+      mainPostContent: ["I would absolutely recommend Nimmo, It's been a pleasure working with him over the last few years.",
+      "He helped ensure a smooth onboarding when I joined the team and was always available to help / offer any assistance - he is an easily approachable figure.",
+      "From a technical perspective, Nimmo has an in-depth understanding of front-end technologies (Elm and React) and a genuine passion to make the development process enjoyable.",
+      "Nimmo keeps himself well informed of the latest developments and shares any that are beneficial with the team - an example being to adopt an ECMA proposal that has significantly simplified our codebase."
+    ],
+      
+      link: "https://www.linkedin.com/in/anton-rand/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bx%2FTb4qsCS3CYrWqGzKYGNQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-recommendation_details_profile",
+      linkText: "See Anton's profile",
+      date: "Jun 22nd, 2020",
+      username: "Anton Rand - Software Engineer @ Click Travel",
+      avatar: "/images/exploding_seagull.jpeg"
+    },
   ]
 
-export default recommendations;
+export default recommendations.reverse();

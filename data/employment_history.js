@@ -199,4 +199,4 @@ const employmentHistory =
       }
   ];
 
-export default employmentHistory;
+export default employmentHistory.reverse();
